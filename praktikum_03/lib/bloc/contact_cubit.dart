@@ -13,8 +13,7 @@ class ContactCubit extends Cubit<ContactState> {
     emit(ContactInitial());
     user.add(User(name: username, number: number));
     emit(ContactLoading());
-    Future.delayed(
-        const Duration(seconds: 3), () => emit(ContactLoaded(user: user)));
+    Future.delayed(const Duration(seconds: 3), () => emit(ContactLoaded(user: user)));
   }
 
   void removeUser({required int index}) {
